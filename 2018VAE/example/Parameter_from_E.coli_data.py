@@ -37,7 +37,7 @@ train_params = {
 
 if __name__ == "__main__":
 
-    data_helper = helper.DataHelper(dataset=data_params["dataset"],
+    data_helper = helper_onemutation_elbo.DataHelper(dataset=data_params["dataset"],
                                     calc_weights=True)
 
     vae_model   = model.VariationalAutoencoder(data_helper,
@@ -59,7 +59,7 @@ if __name__ == "__main__":
         random_seed                    =   model_params["r_seed"],
         )
 
-    job_string = helper.gen_job_string(data_params, model_params)
+    job_string = helper_onemutation_elbo.gen_job_string(data_params, model_params)
     job_string = "test_dataset"
     print (job_string)
 
