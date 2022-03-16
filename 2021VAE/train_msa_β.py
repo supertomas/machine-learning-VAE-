@@ -48,4 +48,4 @@ model.VAE.fit_generator(generator=train_gen,
                         callbacks=callbacks)
 
 if not save_all_epochs:
-  model.save_weights('output/weights/msavae_BLAT_23645_seed.h5')
+  model.save_weights('output/weights/msavae_BLAT_seed.h5')
